@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bawdrt8t75ra"]
+
+[ext_resource type="PackedScene" uid="uid://b80hq5fxiisii" path="res://Scenes/Player.tscn" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://b8eu51u618o5o" path="res://Scenes/main.gd" id="1_r0du0"]
+[ext_resource type="AudioStream" uid="uid://d1d00nnu5uu60" path="res://Sounds/543386__thedragonsspark__nom-noise.wav" id="2_kln2b"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_r0du0")
+pickup_sound = ExtResource("2_kln2b")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_glv2v")]
+position = Vector2(557, 305)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="HUD"]
+offset_left = 18.0
+offset_top = 11.0
+offset_right = 79.0
+offset_bottom = 34.0
+text = "Score: 0"
